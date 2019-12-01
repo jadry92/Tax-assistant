@@ -1,4 +1,4 @@
-# Tax-assistant
+# Tax Assistant
 
 This is a personal web application where you can see all your incomes and spends to help you in the next tax declaration. 
 

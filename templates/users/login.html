@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block head_content %}
+  <title> Tax Assistant </title>
+{% endblock %}
+
+
+
+{% block container %}
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+
+    <!-- Login Form -->
+      <form method="POST" action="{% url 'users:login' %}">
+    {% csrf_token %}
+    {% if form.errors %}
+        <p class="alert alert-danger">
+            Your Username and Password didn't match. Please try again
+        </p>
+    {% endif %}
+        <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

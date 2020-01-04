@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block head_content %}
+    <title> Tax assistant </title>
+{% endblock %}
+
+{% block container %}
+    <div class="container">
+        <div class="row">
+            <h1>Tax assistant </h1>
+        </div>
+        <div class="row">
+            <p> Welcome to the first Tax Assistant Open Source </p>
+        </div>
+        <div class="row">
+            <p> This is a Web Application to save, show your owen spend money.</p>
+        </div>
+        <footer class="sticky-bottom">
+            <div class="row text-center  footer-widget">
+                <div class="col">
+                    <a href="{% url 'users:login' %}">Login</a>
+                </div>
+                <div class="col">
+                    <a href="{% url 'users:signup' %}">Sign Up</a>
+                </div>
+                <div class="col">
+                    <a href="https://github.com/jadry92/Tax-assistant">Source Code</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+{% endblock %}

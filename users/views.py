@@ -40,15 +40,12 @@ class UpdateProfile(LoginRequiredMixin, UpdateView):
 
 
 class LoginView(auth_views.LoginView):
-    # TODO : edit the logout.html
-    # to take out the image
     """Login View."""
     template_name = 'users/login.html'
 
 
 class SignUpView(FormView):
     """Class Sign up view"""
-    # TODO : edit the signup.html
     template_name = 'users/signup.html'
     form_class = SignupForm
     success_url = reverse_lazy('users:login')
@@ -61,5 +58,4 @@ class SignUpView(FormView):
 
 class LogoutView(LoginRequiredMixin, auth_views.LogoutView):
     """Logout view."""
-    # TODO : create the logout.html if is necessary
     template_name = 'users/logout.html'

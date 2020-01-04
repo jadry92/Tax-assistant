@@ -4,11 +4,17 @@
 from django.urls import path
 # Local
 from welcome import views
+
+
 urlpatterns = [
-    # TODO: Create the view and template for "/"
     path(
-        route='/',
-        view=views.,
-        name='login'
+        route='',
+        view=views.LandingPage.as_view(),
+        name='landing'
+    ),
+    path(
+        route='base/',
+        view=views.LandingPage.as_view(),
+        name='home'
     ),
 ]
